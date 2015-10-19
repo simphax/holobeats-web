@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>holo beats</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
+		<style type="text/css">
+			@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+
+			html,body {
+				height: 100%;
+			}
+
+			body {
+				background: #efefef;
+				font-family: 'Helvetica Neue';
+				font-weight: 100;
+				color: #fff;
+			}
+/*
+			header {
+				overflow: visible;
+				width: 100%;
+				height: 100%;
+				padding: 0px 100px;
+				margin: 0px auto;
+			}
+*/
+			#logo {
+				position: relative;
+				padding-top: 200px;
+				max-width: 800px;
+				margin: 0px auto;
+				overflow: visible;
+				z-index: 1000;
+			}
+
+			#logo svg {
+				width: 100%;
+				height: 100%;
+				overflow: visible;
+			}
+			#drumset {
+				position: relative;
+				margin-top: -800px;
+				background-color: #ddd;
+				z-index: 900;
+			}
+			#content {
+				height: 1500px;
+				background-color: #000;
+			}
+			.circle-red {
+				-webkit-transform: translateZ(0);
+			}
+/*
+			article {
+				max-width: 800px;
+				margin: 0px auto;
+			}
+
+			*/
+		</style>
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="logo">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 340 200" xml:space="preserve">
+							<circle id="circle-red" opacity="0.7" fill="#ED1C24" cx="64" cy="64" r="64"/>
+							<circle id="circle-yellow" opacity="0.7" fill="#FFDE17" cx="117" cy="64" r="64"/>
+							<circle id="circle-orange" opacity="0.7" fill="#F26522" cx="170" cy="64" r="64"/>
+							<circle id="circle-green" opacity="0.7" fill="#00A14B" cx="223" cy="64" r="64"/>
+							<circle id="circle-blue" opacity="0.7" fill="#27AAE1" cx="276" cy="64" r="64"/>
+							<g>
+								<path fill="#FFFFFF" d="M52.517,31.451h6.464V59.08h32.937V31.451h6.464V97.32h-6.464V65.527H58.981V97.32h-6.464V31.451z"/>
+								<path fill="#FFFFFF" d="M142.677,29.794c9.797,0,17.997,3.329,24.597,9.985c6.601,6.657,9.901,14.852,9.901,24.583
+									c0,9.643-3.293,17.822-9.879,24.539c-6.585,6.717-14.616,10.075-24.091,10.075c-9.593,0-17.689-3.344-24.29-10.031
+									c-6.601-6.687-9.9-14.776-9.9-24.27c0-6.329,1.503-12.194,4.51-17.598c3.007-5.403,7.106-9.634,12.299-12.694
+									C131.016,31.324,136.634,29.794,142.677,29.794z M142.963,36.198c-4.787,0-9.323,1.27-13.61,3.81
+									c-4.288,2.54-7.635,5.96-10.042,10.262c-2.408,4.302-3.611,9.097-3.611,14.385c0,7.828,2.665,14.438,7.994,19.831
+									c5.329,5.393,11.753,8.089,19.271,8.089c5.021,0,9.667-1.24,13.939-3.72c4.272-2.479,7.605-5.87,9.998-10.173
+									c2.393-4.302,3.59-9.082,3.59-14.341c0-5.228-1.197-9.956-3.59-14.184c-2.393-4.227-5.763-7.61-10.108-10.15
+									C152.447,37.467,147.837,36.198,142.963,36.198z"/>
+								<path fill="#FFFFFF" d="M187.896,31.451h6.465v59.511h24.889v6.358h-31.354V31.451z"/>
+								<path fill="#FFFFFF" d="M253.545,29.794c9.797,0,17.996,3.329,24.597,9.985c6.6,6.657,9.9,14.852,9.9,24.583
+									c0,9.643-3.293,17.822-9.879,24.539s-14.616,10.075-24.091,10.075c-9.593,0-17.689-3.344-24.29-10.031
+									c-6.6-6.687-9.9-14.776-9.9-24.27c0-6.329,1.504-12.194,4.511-17.598c3.007-5.403,7.105-9.634,12.298-12.694
+									S247.501,29.794,253.545,29.794z M253.831,36.198c-4.786,0-9.323,1.27-13.609,3.81c-4.288,2.54-7.636,5.96-10.043,10.262
+									c-2.407,4.302-3.611,9.097-3.611,14.385c0,7.828,2.664,14.438,7.993,19.831s11.753,8.089,19.271,8.089
+									c5.021,0,9.668-1.24,13.94-3.72s7.604-5.87,9.998-10.173c2.393-4.302,3.59-9.082,3.59-14.341c0-5.228-1.197-9.956-3.59-14.184
+									c-2.394-4.227-5.763-7.61-10.108-10.15C263.315,37.467,258.706,36.198,253.831,36.198z"/>
+							</g>
+							<g>
+								<path fill="#808285" d="M59.448,140.921c-0.811-0.81-1.766-1.204-2.918-1.204s-2.106,0.395-2.919,1.205
+									c-0.81,0.812-1.205,1.767-1.205,2.92V163.6c0,5.083,1.747,9.302,5.341,12.897c3.594,3.593,7.812,5.339,12.896,5.339
+									c5.083,0,9.301-1.746,12.896-5.34c3.593-3.596,5.34-7.814,5.34-12.896s-1.747-9.301-5.341-12.897
+									c-3.594-3.593-7.812-5.339-12.896-5.339c-2.843,0-5.472,0.566-7.812,1.685l-2.177,1.041v-4.247
+									C60.655,142.689,60.26,141.733,59.448,140.921z M63.584,156.54c1.941-1.943,4.316-2.929,7.059-2.929
+									c2.742,0,5.117,0.985,7.06,2.929c1.944,1.944,2.929,4.319,2.929,7.06s-0.985,5.115-2.929,7.06c-1.945,1.943-4.32,2.929-7.06,2.929
+									c-2.741,0-5.116-0.985-7.059-2.928v-0.001c-1.944-1.943-2.929-4.318-2.929-7.06S61.64,158.483,63.584,156.54z"/>
+							</g>
+							<g>
+								<path fill="#808285" d="M137.399,150.702c-3.595-3.593-7.813-5.339-12.896-5.339c-5.083,0-9.302,1.746-12.896,5.34
+									c-3.594,3.595-5.341,7.813-5.341,12.896s1.748,9.302,5.341,12.897c3.594,3.593,7.812,5.339,12.896,5.339h8.467
+									c1.152,0,2.107-0.395,2.918-1.206c0.811-0.812,1.206-1.768,1.206-2.919s-0.395-2.106-1.206-2.919
+									c-0.811-0.81-1.766-1.204-2.918-1.204h-8.467c-2.74,0-5.115-0.985-7.06-2.928c-0.15-0.15-0.285-0.299-0.407-0.446l-2.062-2.491
+									h23.64c1.152,0,2.107-0.395,2.918-1.206c0.811-0.812,1.206-1.767,1.206-2.917C142.74,158.518,140.993,154.299,137.399,150.702z
+									 M114.976,159.477l2.062-2.491c0.122-0.147,0.257-0.296,0.404-0.443c1.945-1.945,4.32-2.931,7.062-2.931
+									c2.741,0,5.116,0.985,7.059,2.929c0.146,0.146,0.279,0.293,0.402,0.439l2.088,2.497H114.976z"/>
+							</g>
+							<g>
+								<path fill="#808285" d="M195.368,180.63c0.81-0.812,1.203-1.768,1.203-2.919V163.6c0-5.273-1.7-9.538-5.199-13.038
+									c-3.498-3.498-7.762-5.198-13.036-5.198c-5.266,0-9.526,1.742-13.025,5.326c-3.507,3.597-5.213,7.82-5.213,12.91
+									c0,5.082,1.748,9.301,5.342,12.897c3.593,3.593,7.812,5.339,12.896,5.339c3.221,0,6.172-0.733,8.771-2.179l1.202-0.669l0.786,1.129
+									c0.104,0.15,0.242,0.306,0.409,0.461c0.849,0.862,1.796,1.258,2.943,1.258C193.6,181.836,194.555,181.441,195.368,180.63z
+									 M185.393,170.659L185.393,170.659c-1.943,1.943-4.318,2.929-7.058,2.929c-2.74,0-5.115-0.985-7.06-2.928
+									c-1.945-1.944-2.93-4.32-2.93-7.061s0.985-5.116,2.93-7.06c1.943-1.943,4.318-2.929,7.06-2.929c2.741,0,5.116,0.985,7.059,2.929
+									c1.943,1.943,2.929,4.318,2.929,7.06S187.337,168.716,185.393,170.659z"/>
+							</g>
+							<g>
+								<path fill="#808285" d="M245.427,174.749c0.647-0.759,0.962-1.636,0.962-2.683c0-1.152-0.394-2.107-1.205-2.919
+									c-0.812-0.81-1.767-1.204-2.918-1.204c-1.125,0-2.057,0.38-2.847,1.162l-1.958,2.409c-1.399,1.375-3.106,2.073-5.074,2.073
+									c-1.973,0-3.679-0.705-5.07-2.096c-1.392-1.396-2.097-3.102-2.097-5.07v-12.811h4.345c1.15,0,2.104-0.395,2.918-1.207
+									c0.811-0.812,1.205-1.767,1.205-2.918c0-1.153-0.395-2.108-1.206-2.921c-0.811-0.809-1.766-1.202-2.917-1.202h-4.345v-1.521
+									c0-1.153-0.395-2.108-1.205-2.922c-0.812-0.809-1.767-1.203-2.918-1.203c-1.152,0-2.107,0.395-2.921,1.205
+									c-0.81,0.812-1.204,1.768-1.204,2.92v22.58c0,4.306,1.475,7.873,4.509,10.904c3.034,3.035,6.602,4.51,10.906,4.51
+									c4.308,0,7.88-1.472,10.922-4.498c0.765-0.781,1.447-1.61,2.014-2.451L245.427,174.749z"/>
+							</g>
+							<g>
+								<path fill="#808285" d="M262.833,179.158c0.131,0.115,0.264,0.229,0.398,0.338c0.097,0.079,0.195,0.154,0.302,0.231
+									c1.924,1.422,4.066,2.108,6.559,2.108h4.233c3.108,0,5.692-1.073,7.898-3.28c2.209-2.206,3.281-4.79,3.281-7.901
+									c0-3.108-1.073-5.692-3.28-7.898c-2.206-2.207-4.79-3.279-7.899-3.279h-1.411c-0.8,0-1.519-0.296-2.078-0.856
+									c-0.559-0.556-0.854-1.274-0.854-2.077c0-0.8,0.295-1.519,0.853-2.078c0.564-0.56,1.281-0.854,2.08-0.854h1.411
+									c2.143,0,3.75,0.283,4.914,0.866c0.732,0.366,1.434,0.544,2.143,0.544c1.15,0,2.105-0.395,2.919-1.206
+									c0.81-0.811,1.204-1.766,1.204-2.919c0-0.92-0.247-1.709-0.755-2.41l-0.286-0.395c-0.152-0.136-0.304-0.264-0.452-0.384
+									c-0.113-0.095-0.207-0.164-0.307-0.236c-1.924-1.422-4.065-2.108-6.558-2.108h-4.233c-3.108,0-5.692,1.072-7.901,3.279
+									c-2.207,2.207-3.279,4.792-3.279,7.9s1.072,5.693,3.28,7.901c2.208,2.206,4.792,3.278,7.9,3.278h1.411
+									c0.797,0,1.514,0.294,2.074,0.851c0.563,0.568,0.858,1.285,0.858,2.081c0,0.8-0.296,1.519-0.855,2.077
+									c-0.56,0.561-1.277,0.856-2.077,0.856h-1.411c-2.144,0-3.752-0.283-4.915-0.866c-0.746-0.358-1.475-0.546-2.143-0.546
+									c-1.151,0-2.106,0.395-2.917,1.206c-0.812,0.812-1.206,1.767-1.206,2.917c0,0.889,0.23,1.644,0.704,2.307L262.833,179.158z"/>
+							</g>
+							</svg>
+						</div>
+						<div id="drumset">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 595.28 418.576" enable-background="new 0 0 595.28 418.576" xml:space="preserve">
+							<g id="XMLID_1_">
+								<g id="XMLID_3_" enable-background="new    ">
+									<g id="XMLID_13_">
+										<path id="XMLID_14_" fill="#575756" d="M129.34,127.504c45.045,0,81.558,21.974,81.558,49.083s-36.513,49.088-81.558,49.088
+											s-81.567-21.979-81.567-49.088S84.295,127.504,129.34,127.504z"/>
+									</g>
+									<g id="XMLID_4_" enable-background="new    ">
+										<defs>
+											<path id="XMLID_12_" enable-background="new    " d="M210.898,176.587l0,7.986c0,27.109-36.513,49.088-81.558,49.088
+												s-81.567-21.979-81.567-49.088l0-7.986c0,27.109,36.522,49.088,81.567,49.088S210.898,203.695,210.898,176.587z"/>
+										</defs>
+										<use xlink:href="#XMLID_12_"  overflow="visible" fill="#3C3C3B"/>
+										<clipPath id="XMLID_66_">
+											<use xlink:href="#XMLID_12_"  overflow="visible"/>
+										</clipPath>
+										<g id="XMLID_5_" clip-path="url(#XMLID_66_)" enable-background="new    ">
+											<path id="XMLID_10_" fill="#3C3C3B" d="M210.898,176.587v7.986c0,5.845-1.698,11.452-4.812,16.651v-7.986
+												C209.201,188.039,210.898,182.432,210.898,176.587"/>
+											<path id="XMLID_9_" fill="#3C3C3B" d="M206.086,193.238v7.986c-3.601,6.011-9.095,11.477-16.05,16.138v-7.986
+												C196.991,204.715,202.485,199.249,206.086,193.238"/>
+											<path id="XMLID_8_" fill="#3C3C3B" d="M190.036,209.376v7.986c-14.93,10.005-36.591,16.299-60.695,16.299
+												c-6.112,0-12.068-0.405-17.796-1.172v-7.986c5.729,0.767,11.684,1.172,17.796,1.172
+												C153.444,225.675,175.105,219.381,190.036,209.376"/>
+											<path id="XMLID_7_" fill="#3C3C3B" d="M111.544,224.503v7.986c-10.396-1.393-20.045-3.979-28.528-7.509v-7.986
+												C91.499,220.524,101.148,223.11,111.544,224.503"/>
+											<path id="XMLID_6_" fill="#3C3C3B" d="M83.016,216.994v7.986c-21.292-8.858-35.242-23.653-35.242-40.408v-7.986
+												C47.773,193.341,61.724,208.136,83.016,216.994"/>
+										</g>
+									</g>
+								</g>
+							</g>
+							</svg>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="content">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<script type="text/javascript">
+
+/*
+			$(window).on('scroll resize', function() {
+				///console.log('scroll resize');
+				var viewportHeight = $(window).height();
+				var scroll = $(window).scrollTop();
+				
+				console.log('viewportHeight',viewportHeight);
+				console.log('scroll',scroll);
+
+				var currentScroll = scroll;
+
+				var drumsetHeight = 800;
+				var topPadding = 200;
+				var svgWidth = 340;
+				var containerWidth = $("#logo").width();
+				var svgPixelRatio = svgWidth/containerWidth;
+
+				var opacity = 0.7;
+				var deg = 53;
+				var yPos = (viewportHeight - topPadding + 247) * svgPixelRatio;
+				var xPos = (-71) * svgPixelRatio;
+				var scale = 1.02;
+
+				var transitionEnd = viewportHeight / 2;
+
+				if(currentScroll < transitionEnd) {
+					if(currentScroll > 0) {
+						var transitionProgress = currentScroll / transitionEnd;
+						deg = deg * transitionProgress;
+						yPos = yPos * transitionProgress;
+						xPos = xPos * transitionProgress;
+						scale = 1.0 + (scale - 1.0) * transitionProgress;
+					} else {
+						deg = 0;
+						yPos = 0;
+						xPos = 0;
+						scale = 1.0;
+					}
+				}
+
+				$('#circle-red').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+
+				/*$('#circle-yellow').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+				$('#circle-orange').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+				$('#circle-green').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+				$('#circle-blue').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+				*/
+		//	});
+
+
+			var scroll = window.scrollY;
+
+			var scrollAnimation = function() {
+
+				var viewportHeight = $(window).height();
+				var transitionEnd = viewportHeight / 2;
+
+				if(scroll == window.scrollY || window.scrollY > transitionEnd*1.2) {
+					requestAnimationFrame(scrollAnimation);
+					return;
+				}
+
+				scroll = window.scrollY + 0.0;
+				
+				//console.log('viewportHeight',viewportHeight);
+				//console.log('scroll',scroll);
+
+
+				var drumsetHeight = 800.0;
+				var topPadding = 200.0;
+				var svgWidth = 340.0;
+				var containerWidth = $("#logo").width();
+				var svgPixelRatio = svgWidth/containerWidth + 0.0;
+
+				var opacity = 0.7;
+				var deg = 53.0;
+				var yPos = (viewportHeight - topPadding + 247.0) * svgPixelRatio;
+				var xPos = (-71) * svgPixelRatio;
+				var scale = 1.02;
+
+				if(scroll < transitionEnd) {
+					if(scroll > 0) {
+						var transitionProgress = scroll / transitionEnd;
+						deg = deg * transitionProgress;
+						yPos = yPos * transitionProgress;
+						xPos = xPos * transitionProgress;
+						scale = 1.0 + (scale - 1.0) * transitionProgress;
+					} else {
+						deg = 0;
+						yPos = 0;
+						xPos = 0;
+						scale = 1.0;
+					}
+				}
+
+				$('#circle-red').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
+
+				requestAnimationFrame(scrollAnimation);
+			}
+
+			requestAnimationFrame(scrollAnimation);
+/*
+			var ticking = false;
+			var scroll = 0;
+			var circleRed = document.getElementById('circle-red');
+
+			var translateY3d = function(elm, value) {
+			  var translate = 'translate3d(0px,' + value + 'px, 0px)';
+			  elm.style['-webkit-transform'] = translate;
+			  elm.style['-moz-transform'] = translate;
+			  elm.style['-ms-transform'] = translate;
+			  elm.style['-o-transform'] = translate;
+			  elm.style.transform = translate;
+			};
+
+			var requestTick = function() {
+				if(!ticking) {
+					window.requestAnimationFrame(function(){
+						console.log("translate "+scroll);
+						translateY3d(circleRed,scroll);
+						ticking = false;
+					});
+					ticking = true;
+				}
+			}
+
+			window.addEventListener('scroll', function(){
+				scroll = window.pageYOffset;
+				requestTick();
+			}, false);
+*/
+			$(window).on('resize', function() {
+				//console.log('resize');
+				var viewportHeight = $(window).height();
+				var scroll = $(window).scrollTop();
+				var drumsetHeight = 800;
+				var topPadding = 200;
+
+				var svgWidth = 340;
+				var containerWidth = $("#logo").width();
+				var svgPixelRatio = svgWidth / containerWidth;
+				var svgHeight = (viewportHeight + drumsetHeight - topPadding) * svgPixelRatio;
+				
+
+				$('#logo svg')[0].setAttribute('viewBox','0 0 ' + svgWidth + ' ' + svgHeight);
+			});
+
+			$(window).trigger('resize');
+		</script>
+	</body>
+</html>

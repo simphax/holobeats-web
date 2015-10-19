@@ -25,6 +25,11 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
 
 		<style type="text/css">
 			@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
@@ -48,6 +53,11 @@
 				margin: 0px auto;
 			}
 */
+			header {
+				overflow: visible;
+				width: 100%;
+				height: 100%;
+			}
 			#logo {
 				position: relative;
 				padding-top: 200px;
@@ -61,10 +71,11 @@
 				width: 100%;
 				height: 100%;
 				overflow: visible;
+				position: relative;
+				z-index: 1000;
 			}
 			#drumset {
 				position: relative;
-				margin-top: -800px;
 				background-color: #ddd;
 				z-index: 900;
 			}
@@ -72,9 +83,60 @@
 				height: 1500px;
 				background-color: #000;
 			}
-			.circle-red {
-				-webkit-transform: translateZ(0);
+
+			.circle {
+				border-radius: 100%;
+				width: 38%;
+				opacity: 0.7;
+				position: absolute;
+				z-index: 900;
 			}
+
+			.circle:before {
+				content: "";
+				display: block;
+				padding-top: 100%; 
+			}
+
+			.circle-red {
+				background: #ED1C24;
+			}
+			#circle-yellow {
+				background: #FFDE17;
+				left: 16%;
+			}
+			#circle-yellow-pos {
+				left: 16%;
+			}
+			#circle-orange {
+				background: #F26522;
+				left: 31%;
+			}
+			#circle-orange-pos {
+				left: 31%;
+			}
+			#circle-green {
+				background: #00A14B;
+				left: 47%;
+			}
+			#circle-green-pos {
+				left: 47%;
+			}
+			#circle-blue {
+				background: #27AAE1;
+				left: 62%;
+			}
+			#circle-blue-pos {
+				left: 62%;
+			}
+
+			#circle-red1 {
+				opacity: 0.0;
+			}
+			#circle-red2 {
+				opacity: 0.0;
+			}
+
 /*
 			article {
 				max-width: 800px;
@@ -91,13 +153,25 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div id="logo">
+							<div class="circle circle-red" id="circle-red"></div>
+							<div class="circle circle-red" id="circle-red1"></div>
+							<div class="circle circle-red" id="circle-red2"></div>
+							<div class="circle" id="circle-yellow"></div>
+							<div class="circle" id="circle-orange"></div>
+							<div class="circle" id="circle-green"></div>
+							<div class="circle" id="circle-blue"></div>
+							<div class="circle" id="circle-red-pos"></div>
+							<div class="circle" id="circle-yellow-pos"></div>
+							<div class="circle" id="circle-orange-pos"></div>
+							<div class="circle" id="circle-green-pos"></div>
+							<div class="circle" id="circle-blue-pos"></div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 340 200" xml:space="preserve">
-							<circle id="circle-red" opacity="0.7" fill="#ED1C24" cx="64" cy="64" r="64"/>
-							<circle id="circle-yellow" opacity="0.7" fill="#FFDE17" cx="117" cy="64" r="64"/>
-							<circle id="circle-orange" opacity="0.7" fill="#F26522" cx="170" cy="64" r="64"/>
-							<circle id="circle-green" opacity="0.7" fill="#00A14B" cx="223" cy="64" r="64"/>
-							<circle id="circle-blue" opacity="0.7" fill="#27AAE1" cx="276" cy="64" r="64"/>
+							<!--circle opacity="0.7" fill="#ED1C24" cx="64" cy="64" r="64"/>
+							<circle opacity="0.7" fill="#FFDE17" cx="117" cy="64" r="64"/>
+							<circle opacity="0.7" fill="#F26522" cx="170" cy="64" r="64"/>
+							<circle opacity="0.7" fill="#00A14B" cx="223" cy="64" r="64"/>
+							<circle opacity="0.7" fill="#27AAE1" cx="276" cy="64" r="64"/-->
 							<g>
 								<path fill="#FFFFFF" d="M52.517,31.451h6.464V59.08h32.937V31.451h6.464V97.32h-6.464V65.527H58.981V97.32h-6.464V31.451z"/>
 								<path fill="#FFFFFF" d="M142.677,29.794c9.797,0,17.997,3.329,24.597,9.985c6.601,6.657,9.901,14.852,9.901,24.583
@@ -167,14 +241,23 @@
 									c-1.151,0-2.106,0.395-2.917,1.206c-0.812,0.812-1.206,1.767-1.206,2.917c0,0.889,0.23,1.644,0.704,2.307L262.833,179.158z"/>
 							</g>
 							</svg>
+							<div id="anitrigger"></div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
 						<div id="drumset">
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 595.28 418.576" enable-background="new 0 0 595.28 418.576" xml:space="preserve">
 							<g id="XMLID_1_">
 								<g id="XMLID_3_" enable-background="new    ">
-									<g id="XMLID_13_">
-										<path id="XMLID_14_" fill="#575756" d="M129.34,127.504c45.045,0,81.558,21.974,81.558,49.083s-36.513,49.088-81.558,49.088
+									<g id="drumface-snare" >
+										<path fill="#575756" d="M129.34,127.504c45.045,0,81.558,21.974,81.558,49.083s-36.513,49.088-81.558,49.088
 											s-81.567-21.979-81.567-49.088S84.295,127.504,129.34,127.504z"/>
 									</g>
 									<g id="XMLID_4_" enable-background="new    ">
@@ -208,13 +291,12 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</article>
 		<article>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<div id="content">
-
 						</div>
 					</div>
 				</div>
@@ -223,151 +305,80 @@
 
 		<script type="text/javascript">
 
+			var controller = new ScrollMagic.Controller();
+			
+				var scene = new ScrollMagic.Scene({triggerElement: "#anitrigger", offset: 0, duration: "70%"})
+					.addIndicators()
+					.addTo(controller);
 /*
-			$(window).on('scroll resize', function() {
-				///console.log('scroll resize');
-				var viewportHeight = $(window).height();
-				var scroll = $(window).scrollTop();
-				
-				console.log('viewportHeight',viewportHeight);
-				console.log('scroll',scroll);
+				var scene2 = new ScrollMagic.Scene({triggerElement: "#drumface-snare", offset: 60})
+					.addIndicators()
+					.addTo(controller);
 
-				var currentScroll = scroll;
-
-				var drumsetHeight = 800;
-				var topPadding = 200;
-				var svgWidth = 340;
-				var containerWidth = $("#logo").width();
-				var svgPixelRatio = svgWidth/containerWidth;
-
-				var opacity = 0.7;
-				var deg = 53;
-				var yPos = (viewportHeight - topPadding + 247) * svgPixelRatio;
-				var xPos = (-71) * svgPixelRatio;
-				var scale = 1.02;
-
-				var transitionEnd = viewportHeight / 2;
-
-				if(currentScroll < transitionEnd) {
-					if(currentScroll > 0) {
-						var transitionProgress = currentScroll / transitionEnd;
-						deg = deg * transitionProgress;
-						yPos = yPos * transitionProgress;
-						xPos = xPos * transitionProgress;
-						scale = 1.0 + (scale - 1.0) * transitionProgress;
-					} else {
-						deg = 0;
-						yPos = 0;
-						xPos = 0;
-						scale = 1.0;
-					}
-				}
-
-				$('#circle-red').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-
-				/*$('#circle-yellow').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-				$('#circle-orange').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-				$('#circle-green').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-				$('#circle-blue').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-				*/
-		//	});
-
-
-			var scroll = window.scrollY;
-
-			var scrollAnimation = function() {
-
-				var viewportHeight = $(window).height();
-				var transitionEnd = viewportHeight / 2;
-
-				if(scroll == window.scrollY || window.scrollY > transitionEnd*1.2) {
-					requestAnimationFrame(scrollAnimation);
-					return;
-				}
-
-				scroll = window.scrollY + 0.0;
-				
-				//console.log('viewportHeight',viewportHeight);
-				//console.log('scroll',scroll);
-
-
-				var drumsetHeight = 800.0;
-				var topPadding = 200.0;
-				var svgWidth = 340.0;
-				var containerWidth = $("#logo").width();
-				var svgPixelRatio = svgWidth/containerWidth + 0.0;
-
-				var opacity = 0.7;
-				var deg = 53.0;
-				var yPos = (viewportHeight - topPadding + 247.0) * svgPixelRatio;
-				var xPos = (-71) * svgPixelRatio;
-				var scale = 1.02;
-
-				if(scroll < transitionEnd) {
-					if(scroll > 0) {
-						var transitionProgress = scroll / transitionEnd;
-						deg = deg * transitionProgress;
-						yPos = yPos * transitionProgress;
-						xPos = xPos * transitionProgress;
-						scale = 1.0 + (scale - 1.0) * transitionProgress;
-					} else {
-						deg = 0;
-						yPos = 0;
-						xPos = 0;
-						scale = 1.0;
-					}
-				}
-
-				$('#circle-red').css({opacity: opacity, transform: 'translate3d(' + xPos + 'px,' + yPos + 'px,0) rotate3d(1,0,0,' + deg + 'deg) scale3d(' + scale + ', ' + scale + ', 1.0)'});
-
-				requestAnimationFrame(scrollAnimation);
-			}
-
-			requestAnimationFrame(scrollAnimation);
-/*
-			var ticking = false;
-			var scroll = 0;
-			var circleRed = document.getElementById('circle-red');
-
-			var translateY3d = function(elm, value) {
-			  var translate = 'translate3d(0px,' + value + 'px, 0px)';
-			  elm.style['-webkit-transform'] = translate;
-			  elm.style['-moz-transform'] = translate;
-			  elm.style['-ms-transform'] = translate;
-			  elm.style['-o-transform'] = translate;
-			  elm.style.transform = translate;
-			};
-
-			var requestTick = function() {
-				if(!ticking) {
-					window.requestAnimationFrame(function(){
-						console.log("translate "+scroll);
-						translateY3d(circleRed,scroll);
-						ticking = false;
-					});
-					ticking = true;
-				}
-			}
-
-			window.addEventListener('scroll', function(){
-				scroll = window.pageYOffset;
-				requestTick();
-			}, false);
+				var tween = new TimelineMax ()
+						.add([
+							TweenMax.to("#circle-red2", 0.4, {
+								opacity: 0.0,
+								ease: Power1.easeOut,
+							}),
+							TweenMax.to("#circle-red2", 0.6, {
+								scale: 3,
+								ease: Power1.easeOut
+							})
+						]);
+				scene2.setTween(tween);
 */
 			$(window).on('resize', function() {
-				//console.log('resize');
-				var viewportHeight = $(window).height();
-				var scroll = $(window).scrollTop();
-				var drumsetHeight = 800;
-				var topPadding = 200;
+				var scaleOfDrumset = $("#drumset").width()/1126;
+				var scaleOfLogo = $("#logo").width()/800;
 
-				var svgWidth = 340;
-				var containerWidth = $("#logo").width();
-				var svgPixelRatio = svgWidth / containerWidth;
-				var svgHeight = (viewportHeight + drumsetHeight - topPadding) * svgPixelRatio;
-				
-
-				$('#logo svg')[0].setAttribute('viewBox','0 0 ' + svgWidth + ' ' + svgHeight);
+				var tween = new TimelineMax ()
+						.add([
+							TweenMax.fromTo("#circle-red", 0.4, {rotationX: 0, transformOrigin: "left top", force3D: true}, {
+								rotationX: 53,
+								ease: Power1.easeOut
+							}),
+							TweenMax.fromTo("#circle-red", 1, {x:0, y:0, z:-200, scale: 1.0, transformOrigin: "left top", force3D: true}, {
+								x: $("#drumface-snare")[0].getBoundingClientRect().left - $("#circle-red-pos").offset().left,
+								y: $("#drumface-snare")[0].getBoundingClientRect().top - $("#circle-red-pos").offset().top-250,
+								scale: (scaleOfDrumset/scaleOfLogo)+0.01,
+								ease: Power1.easeOut
+							}),
+							TweenMax.fromTo("#circle-red1", 0.3, {opacity: 0.0}, {
+								opacity: 0.7,
+							}),
+							TweenMax.fromTo("#circle-red1", 0.4, {rotationX: 0, transformOrigin: "left top", force3D: true}, {
+								rotationX: 53,
+								ease: Power1.easeOut
+							}),
+							TweenMax.fromTo("#circle-red1", 1, {x:0, y:0, z:-200, scale: 1.0, transformOrigin: "left top", force3D: true}, {
+								x: $("#drumface-snare")[0].getBoundingClientRect().left - $("#circle-red-pos").offset().left,
+								y: $("#drumface-snare")[0].getBoundingClientRect().top - $("#circle-red-pos").offset().top-160,
+								scale: (scaleOfDrumset/scaleOfLogo)+0.01,
+								ease: Power1.easeOut,
+							}),
+							TweenMax.fromTo("#circle-red2", 0.3, {opacity: 0.0}, {
+								opacity: 0.7,
+							}),
+							TweenMax.fromTo("#circle-red2", 0.4, {rotationX: 0, transformOrigin: "left top", force3D: true}, {
+								rotationX: 53,
+								ease: Power1.easeOut
+							}),
+							TweenMax.fromTo("#circle-red2", 1, {x:0, y:0, z:-200, scale: 1.0, transformOrigin: "left top", force3D: true}, {
+								x: $("#drumface-snare")[0].getBoundingClientRect().left - $("#circle-red-pos").offset().left,
+								y: $("#drumface-snare")[0].getBoundingClientRect().top - $("#circle-red-pos").offset().top,
+								scale: (scaleOfDrumset/scaleOfLogo)+0.01,
+								ease: Power1.easeOut,
+							})/*,
+							TweenMax.fromTo("#circle-yellow", 1.2, {x:0, y:0, z:-100, scale: 1.0, rotationX: 0, transformOrigin: "left top", force3D: true}, {
+								x: $("#drumface-snare")[0].getBoundingClientRect().left - $("#circle-yellow-pos").offset().left,
+								y: $("#drumface-snare")[0].getBoundingClientRect().top - $("#circle-yellow-pos").offset().top,
+								rotationX: 53,
+								scale: (scaleOfDrumset/scaleOfLogo)+0.01,
+								ease: Power1.easeOut
+							})*/
+						]);
+				scene.setTween(tween);
 			});
 
 			$(window).trigger('resize');
